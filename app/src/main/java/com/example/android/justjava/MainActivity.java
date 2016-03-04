@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.NumberFormat;
 
@@ -36,7 +37,8 @@ public class MainActivity extends ActionBarActivity {
 
     public void submitOrder(View view) {
         displayQuantity(numberOfCoffees);
-        displayPrice(numberOfCoffees*5);
+        displayPrice(numberOfCoffees * 5);
+        Toast.makeText(MainActivity.this,"Thank You!", Toast.LENGTH_LONG).show();
     }
 
     private void displayPrice(int number) {
